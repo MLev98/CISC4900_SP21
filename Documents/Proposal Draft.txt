@@ -1,2 +1,5 @@
- A web app for new students to the department. They can use the app to understand the sequence of classes required to complete their major in this department, depending on career interests (game design, web, databases, devops, etc). 
-With potential features like a credit calculator to see how many credits to a class and its pre-reqs, or a multi year scheduler for courses. As well as see progress/track for CISC minors. 
+A web app for new students to the department. 
+They can use the app to understand the sequence of classes required to complete their major in this department, 
+depending on career interests (game design, web, databases, devops, etc). 
+With potential features like a credit calculator to see how many credits to a class and its pre-reqs, 
+or a multi year scheduler for courses. As well as see progress/track for CISC minors. 
