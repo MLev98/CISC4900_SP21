@@ -29,10 +29,10 @@ and open the template in the editor.
       </div>
       <button class="form__button" type="submit">Login</button>
       <p class="form__text">
-        <a href="#" class="form__link" onclick="forgotPasswordForm(login)" id="forgotLink">Forgot your password?</a>
+        <a href="#" class="form__link" onclick="formVisibilityToggle(login, forgot)">Forgot your password?</a>
       </p>
       <p class="form__text">
-        <a class="form__link" onclick="createAccountF(login)" id="linkCreateAccount">Don't have an account? Create Account</a>
+        <a class="form__link" onclick="formVisibilityToggle(login, createAccount)">Don't have an account? Create Account</a>
       </p>
     </form>
     <form class="form form--hidden" id="createAccount">
@@ -60,7 +60,7 @@ and open the template in the editor.
       </div>
       <button class="form__button" type="submit">Create</button>
       <p class="form__text">
-        <a class="form__link" onclick="alreadyHaveAccount(createAccount)" id="linkLogin">Already have an account? Sign in</a>
+        <a class="form__link" onclick="formVisibilityToggle(createAccount, login)">Already have an account? Sign in</a>
       </p>
     </form>
     <form class="form form--hidden" id="forgot">
@@ -80,7 +80,7 @@ and open the template in the editor.
       </div>
       <button class="form__button" type="submit">Submit</button>
       <p class="form__text">
-        <a class="form__link" onclick="alreadyHaveAccount(forgot)" id="linkLogin2">Back to login</a>
+        <a class="form__link" onclick="formVisibilityToggle(forgot, login)">Back to login</a>
       </p>
     </form>
   </div>
