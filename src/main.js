@@ -55,8 +55,9 @@ function formVisibilityToggle(form1, form2) {
 *
 */
 function login() {
-  if (loginUser.value === "admin" && loginCredentials.value === "admin")
-  window.location = "./profile.html";
+  if (loginUser.value === "admin" && loginCredentials.value === "admin") {
+    window.location = "./profile.html";
+  }
 }
 
 /**
@@ -72,25 +73,25 @@ function logout() {
 *
 * @param element element affected
 */
-function strikethroughRow(element) {
-  if (element.is(":checked")) {
-    $(element.name).classList.add("checkCross");
-
-    $(element.value)_instructor.attr('disabled', 'disabled');
-    $(element.value)_instructor.value = " ";
-
-    $(element.value)_grade.attr('dissabled', 'disabled');
-    $(element.value)_grade.value = " ";
-  }
-  else {
-    $(element.name).classList.remove("checkCross");
-
-    $(element.value)_instructor.attr('disabled');
-
-    $(element.value)_grade.attr('dissabled');
-  }
-  // Needs custom to work for any _instructor/grade so JQuery
-}
+// function strikethroughRow(element) {
+//   if (element.is(":checked")) {
+//     $(element.name).classList.add("checkCross");
+//
+//     $(element.value)_instructor.attr('disabled', 'disabled');
+//     $(element.value)_instructor.value = " ";
+//
+//     $(element.value)_grade.attr('dissabled', 'disabled');
+//     $(element.value)_grade.value = " ";
+//   }
+//   else {
+//     $(element.name).classList.remove("checkCross");
+//
+//     $(element.value)_instructor.attr('disabled');
+//
+//     $(element.value)_grade.attr('dissabled');
+//   }
+//   // Needs custom to work for any _instructor/grade so JQuery
+// }
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.querySelector("#login");
