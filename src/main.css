@@ -3,7 +3,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : Mar 2, 2021, 10:13:17 AM
     Author     : Fefy6
 */
@@ -14,7 +14,7 @@ body{
     --color-error: #cc3333;
     --color-success: #4bb544;
     --border-radius: 4px;
-    
+
     margin: 0;
     height: 100vh;
     display: flex;
@@ -22,7 +22,7 @@ body{
     justify-content: center;
     font-size: 18px;
     background: #808080;
-    
+
 }
 
 .container{
@@ -32,7 +32,7 @@ body{
     padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0, 0.2);
     border-radius: var(--border-radius);
-    background: #ffffff   
+    background: #ffffff;
 }
 
 .container,.form__input,.form__button{
@@ -114,6 +114,19 @@ body{
     background: var(--color-primary);
 }
 
+.form__button2{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #000000;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: #cccccc;
+}
+
 .form__button:hover{
     background: var(--color-primary-dark);
 }
@@ -129,7 +142,7 @@ body{
 .form__link{
     color: var(--color-secondary);
     text-decoration: none;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .form__link:hover{
