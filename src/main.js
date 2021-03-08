@@ -10,7 +10,7 @@
  * @param type Type of message, error or success
  * @param message The message
  */
-function setFormMessage(formElement, type, message){
+function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector(".form__message");
 
     messageElement.textContent = message;
@@ -24,7 +24,7 @@ function setFormMessage(formElement, type, message){
  * @param inputElement Input field that needs error
  * @param message Error message
  */
-function setInputError(inputElement, message){
+function setInputError(inputElement, message) {
     inputElement.classList.add("form__input--error");
     inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
 }
@@ -34,7 +34,7 @@ function setInputError(inputElement, message){
  *
  * @param inputElement Input field that error will be cleared from
  */
-function clearInputError(inputElement){
+function clearInputError(inputElement) {
     inputElement.classList.remove("form__input--error");
     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
 }
@@ -49,6 +49,23 @@ function formVisibilityToggle(form1, form2) {
   form1.classList.add("form--hidden");
   form2.classList.remove("form--hidden");
 }
+
+/**
+ * Logins using a test account Test Method
+ *
+ */
+function login() {
+  if (loginUser.value === "admin" && loginCredentials.value === "admin")
+    window.location = "./profile.html";
+}
+
+/**
+ * Lougouts Test Method
+ *
+ */
+ function logout() {
+   window.location = "./index.html";
+ }
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
