@@ -11,6 +11,22 @@
 <body>
   <script src="main.js"></script>
   <div class="container">
+    <div class="form__input-group">
+      <label for="major">Select Your Major:</label>
+      <select name="Major" id="major">
+        <option value="cs_major">Computer Science</option>
+        <option value="is_major">Information Systems</option>
+        <option value="mc_major">Multimedia Computing</option>
+      </select>
+    </div>
+    <div class="form__input-group">
+      <label for="minor">Select Your Minor:</label>
+      <select name="Minor" id="minor">
+        <option value="cs_minor">Computer Science</option>
+        <option value="ds_minor">Data Science</option>
+        <option value="mc_minor">Multimedia Computing</option>
+      </select>
+    </div>
     <form class="form" id="completedClasses">
       <h1 class="form__title">Completed Classes:</h1>
       <div class="form__message form__message--error"></div>
