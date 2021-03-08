@@ -68,31 +68,6 @@ function logout() {
   window.location = "./index.html";
 }
 
-/**
-* Makes the checkboxed row strikethroughed and input disabled
-*
-* @param element element affected
-*/
-// function strikethroughRow(element) {
-//   if (element.is(":checked")) {
-//     $(element.name).classList.add("checkCross");
-//
-//     $(element.value)_instructor.attr('disabled', 'disabled');
-//     $(element.value)_instructor.value = " ";
-//
-//     $(element.value)_grade.attr('dissabled', 'disabled');
-//     $(element.value)_grade.value = " ";
-//   }
-//   else {
-//     $(element.name).classList.remove("checkCross");
-//
-//     $(element.value)_instructor.attr('disabled');
-//
-//     $(element.value)_grade.attr('dissabled');
-//   }
-//   // Needs custom to work for any _instructor/grade so JQuery
-// }
-
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.querySelector("#login");
   const createAccountForm = document.querySelector("#createAccount");
