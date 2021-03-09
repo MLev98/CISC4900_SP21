@@ -65,7 +65,7 @@ function login() {
 *
 */
 function logout() {
-  window.location = "./index.html";
+  window.location = "./index.php";
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -13,6 +13,10 @@
   <div class="container2">
     <h1 class="form__title">Profile:</h1>
     <div class="form__input-group">
+      <input type="text" id="emplid_profile" name = "emplid" class="form__input placeholder" autofocus placeholder="EMPLID" maxlength="8">
+      <div class="form__input-error-message"></div>
+    </div>
+    <div class="form__input-group">
       <center><label for="major">Select Your Major:</label>
       <select name="Major" id="major">
         <option value="cs_major">Computer Science</option>
@@ -20,6 +24,7 @@
         <option value="mc_major">Multimedia Computing</option>
         <option value="un_major">Undeclared</option>
       </select></center>
+      <div class="form__input-error-message"></div>
     </div>
     <div class="form__input-group">
       <center><label for="minor">Select Your Minor:</label>
@@ -29,6 +34,7 @@
         <option value="mc_minor">Multimedia Computing</option>
         <option value="un_minor">Undeclared</option>
       </select></center>
+      <div class="form__input-error-message"></div>
     </div>
     <form class="form" id="completedClasses">
       <h3 class="form__title">Completed Classes:</h3>
