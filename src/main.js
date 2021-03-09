@@ -10,7 +10,7 @@
  * @param type Type of message, error or success
  * @param message The message
  */
-function setFormMessage(formElement, type, message){
+ function setFormMessage(formElement, type, message){
     const messageElement = formElement.querySelector(".form__message");
 
     messageElement.textContent = message;
@@ -56,21 +56,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const forgotForm = document.querySelector("#forgot");
 
     //Checks for successful login and prints error if unsuccessful
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();
+    // loginForm.addEventListener("submit", e => {
+    //     e.preventDefault();
 
-        //Set up success login feature here
+    //     //Set up success login feature here
 
-        setFormMessage(loginForm, "error", "Invalid username/password");
-    });
+    //     setFormMessage(loginForm, "error", "Invalid username/password");
+    // });
 
     //Checks if input element fulfills specific requirements
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
             //Checks that username fulfills requirements for valid username
-            if(e.target.id === "usernameSetUp" && e.target.value.length > 0 && e.target.value.length < 10)
+            if(e.target.id === "usernameSetUp" && e.target.value.length > 0 && e.target.value.length < 4)
                 //Prints error
-                setInputError(inputElement, "Username must be 10 characters long");
+                setInputError(inputElement, "Username must be 4 characters long");
         });
 
         //Clears error message while typing
