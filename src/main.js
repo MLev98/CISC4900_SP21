@@ -67,10 +67,25 @@ document.addEventListener("DOMContentLoaded", () => {
     //Checks if input element fulfills specific requirements
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
+            
+            var numbers = /^[0-9]+$/;
+            //Checks EMPLID is only numbers
+            if(e.target.id === "emplid" && !e.target.value.match(numbers))
+                setInputError(inputElement, "EMPLID must only contain numbers");
             //Checks that username fulfills requirements for valid username
             if(e.target.id === "usernameSetUp" && e.target.value.length > 0 && e.target.value.length < 4)
-                //Prints error
-                setInputError(inputElement, "Username must be 4 characters long");
+                setInputError(inputElement, "Username must be atleast 4 characters long");
+            var validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            //Checks email follows valid email format
+            if(e.target.id === "emailSetUp" && !e.target.value.match(validEmail))
+                setInputError(inputElement, "Invalid email, enter a valid email");
+            var validPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8}$/;
+            //Checks password follows valid password requirements
+            if(e.target.id === "passwordSetUp" && !e.target.value.match(validPassword))
+                setInputError(inputElement, "Invalid password; must contain atleast 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character");
+            //Checks password is the same as original
+            if(e.target.id === "passwordConfirmedSetUp" && !(e.target.value == document.getElementById('passwordSetUp').value))
+                setInputError(inputElement, "Password doesn't match");
         });
 
         //Clears error message while typing
