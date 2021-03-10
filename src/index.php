@@ -29,14 +29,14 @@ and open the template in the editor.
       <h1 class="form__title">Login</h1>
       <div class="form__message form__message--error"></div>
       <div class="form__input-group">
-        <input type="text" class="form__input" name = "username" autofocus placeholder="Username or Email" required>
+        <input type="text" class="form__input" name="username" autofocus placeholder="Username or Email" id="loginUser" required>
         <div class="form__input-error-message"></div>
       </div>
       <div class="form__input-group">
-        <input type="password" class="form__input" name = "password" autofocus placeholder="Password" required>
+        <input type="password" class="form__input" name="password" autofocus placeholder="Password" id="loginCredentials" required>
         <div class="form__input-error-message"></div>
       </div>
-      <button class="form__button" type="submit" name = "login">Login</button>
+      <button class="form__button" type="submit" onclick="login()" name="login">Login</button>
       <p class="form__text">
         <a href="#" class="form__link" onclick="formVisibilityToggle(login, forgot)">Forgot your password?</a>
       </p>
@@ -110,7 +110,7 @@ if(isset($_POST['login'])) {
   if(mysqli_num_rows($result) == 1) {
     $_SESSION["logged_in"] = true;
     $_SESSION["username"] = mysqli_fetch_assoc($result)['username'];
-    
+
     print '<script>window.location.href = "dashboard.php"</script>';
   } else {
     print '<script>alert("Invalid username/password...");</script>';
@@ -126,12 +126,12 @@ if(isset($_POST['register'])) {
 
   if($password == $password2) {
     $sql = "SELECT username FROM users WHERE username = '$username'";
-    
+
     if($result = mysqli_query($link,$sql)) {
       if(!mysqli_num_rows($result)) {
         $_SESSION["logged_in"] = true;
         $_SESSION["username"] = $username;
-        
+
         $sql = ("INSERT INTO users(username, password, emplid, email) VALUES ('$username', '$password', '$emplid', '$email')");
         $result = mysqli_query($link, $sql);
         print '<script>alert("Successfully registered!"); window.location.href = "dashboard.php"</script>';
