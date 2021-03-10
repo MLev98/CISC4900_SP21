@@ -13,7 +13,7 @@
   <div class="container2">
     <h1 class="form__title">Profile:</h1>
     <div class="form__input-group">
-      <input type="text" id="emplid_profile" name = "emplid" class="form__input placeholder" autofocus placeholder="EMPLID" maxlength="8">
+      <input type="text" id="emplid_profile" name="emplid" class="form__input placeholder" autofocus placeholder="EMPLID" maxlength="8">
       <div class="form__input-error-message"></div>
     </div>
     <div class="form__input-group">
@@ -66,10 +66,10 @@
         </div>
       </table>
       <br>
-      <button class="form__button2" type="button">Complete Later</button>
-      <button class="form__button" type="submit">Save</button>
+      <button class="form__button2" type="button" name="completeLater">Complete Later</button>
+      <button class="form__button" type="submit" name="save">Save</button>
       <p class="form__text">
-        <a class="form__link" onclick="logout()">Logout</a>
+        <a class="form__link" onclick="logout()" name="logout">Logout</a>
       </p>
     </form>
   </div>
