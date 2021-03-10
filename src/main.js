@@ -4,14 +4,14 @@
 * and open the template in the editor.
 */
 /**
-* Displays Message for errors or success
-*
-* @param formElement Form that needs message associated with it
-* @param type Type of message, error or success
-* @param message The message
-*/
-function setFormMessage(formElement, type, message) {
-  const messageElement = formElement.querySelector(".form__message");
+ * Displays Message for errors or success
+ *
+ * @param formElement Form that needs message associated with it
+ * @param type Type of message, error or success
+ * @param message The message
+ */
+ function setFormMessage(formElement, type, message){
+    const messageElement = formElement.querySelector(".form__message");
 
   messageElement.textContent = message;
   messageElement.classList.remove("form__message--success", "form__message--error");
@@ -73,23 +73,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const createAccountForm = document.querySelector("#createAccount");
   const forgotForm = document.querySelector("#forgot");
 
-  //Checks for successful login and prints error if unsuccessful
-  loginForm.addEventListener("submit", e => {
-    e.preventDefault();
+    //Checks for successful login and prints error if unsuccessful
+    // loginForm.addEventListener("submit", e => {
+    //     e.preventDefault();
 
-    //Set up success login feature here
+    //     //Set up success login feature here
 
-    setFormMessage(loginForm, "error", "Invalid username/password");
-  });
+    //     setFormMessage(loginForm, "error", "Invalid username/password");
+    // });
 
-  //Checks if input element fulfills specific requirements
-  document.querySelectorAll(".form__input").forEach(inputElement => {
-    inputElement.addEventListener("blur", e => {
-      //Checks that username fulfills requirements for valid username
-      if(e.target.id === "usernameSetUp" && e.target.value.length > 0 && e.target.value.length < 10)
-      //Prints error
-      setInputError(inputElement, "Username must be 10 characters long");
-    });
+    //Checks if input element fulfills specific requirements
+    document.querySelectorAll(".form__input").forEach(inputElement => {
+        inputElement.addEventListener("blur", e => {
+
+            var numbers = /^[0-9]+$/;
+            //Checks EMPLID is only numbers
+            if(e.target.id === "emplid" && !e.target.value.match(numbers))
+                setInputError(inputElement, "EMPLID must only contain numbers");
+            //Checks that username fulfills requirements for valid username
+            if(e.target.id === "usernameSetUp" && e.target.value.length > 0 && e.target.value.length < 4)
+                setInputError(inputElement, "Username must be atleast 4 characters long");
+            var validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            //Checks email follows valid email format
+            if(e.target.id === "emailSetUp" && !e.target.value.match(validEmail))
+                setInputError(inputElement, "Invalid email, enter a valid email");
+            var validPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8}$/;
+            //Checks password follows valid password requirements
+            if(e.target.id === "passwordSetUp" && !e.target.value.match(validPassword))
+                setInputError(inputElement, "Invalid password; must contain atleast 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character");
+            //Checks password is the same as original
+            if(e.target.id === "passwordConfirmedSetUp" && !(e.target.value == document.getElementById('passwordSetUp').value))
+                setInputError(inputElement, "Password doesn't match");
+        });
 
     //Clears error message while typing
     inputElement.addEventListener("input", e => {
