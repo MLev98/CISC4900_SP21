@@ -45,6 +45,7 @@
             <th>Not Taken</th><th>Course ID</th><th>Course Name</th><th>Instructor</th><th>Grade</th>
           </tr>
         </div>
+        <!-- Example to Display Formatting (Remove Later)-->
         <div class="form__input-group">
           <tr id="tr_1115">
             <td><input type="checkbox" id="cisc1115_bool" onclick="strikethroughRow(this)" name="tr_1115" value="cisc1115"></td>
@@ -53,9 +54,18 @@
             <td><input type="text" class="form__input placeholder" autofocus placeholder="Name" id="cisc1115_instructor"></td>
             <td><input type="text" class="form__input placeholder" autofocus placeholder="Grade" id="cisc1115_grade" maxlength="2"></td>
           </tr>
+
+          <tr id="tr_3115">
+            <td><input type="checkbox" id="cisc3115_bool" onclick="strikethroughRow(this)" name="tr_3115" value="cisc3115"></td>
+            <td>CISC 3115</td>
+            <td>Introduction to Modern Programming Techniques</td>
+            <td><input type="text" class="form__input placeholder" autofocus placeholder="Name" id="cisc3115_instructor"></td>
+            <td><input type="text" class="form__input placeholder" autofocus placeholder="Grade" id="cisc3115_grade" maxlength="2"></td>
+          </tr>
           <div class="form__input-error-message"></div>
         </div>
       </table>
+      <br>
       <button class="form__button2" type="button">Complete Later</button>
       <button class="form__button" type="submit">Save</button>
       <p class="form__text">

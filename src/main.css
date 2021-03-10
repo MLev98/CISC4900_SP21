@@ -159,8 +159,16 @@ body{
   text-decoration: underline;
 }
 
+input[type=checkbox] {
+  cursor: pointer;
+}
+
 table, td {
   border-collapse: collapse; text-align: center; padding: 15px;
+}
+
+tr:hover {
+  background: #f3f3f3;
 }
 
 .placeholder {
