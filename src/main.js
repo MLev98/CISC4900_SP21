@@ -65,7 +65,7 @@ function login() {
 *
 */
 function logout() {
-  window.location = "./dashboard.php";
+  window.location = "./logout.php";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             var numbers = /^[0-9]+$/;
             //Checks EMPLID is only numbers
-            if(e.target.id === "emplid" && !e.target.value.match(numbers))
+            if((e.target.id === "emplid" || e.target.id === "emplid_profile") && !e.target.value.match(numbers))
                 setInputError(inputElement, "EMPLID must only contain numbers");
             //Checks that username fulfills requirements for valid username
             if(e.target.id === "usernameSetUp" && e.target.value.length > 0 && e.target.value.length < 4)
