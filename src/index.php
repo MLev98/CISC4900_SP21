@@ -49,10 +49,6 @@ and open the template in the editor.
       <h1 class="form__title">Create Account</h1>
       <div class="form__message form__message--error"></div>
       <div class="form__input-group">
-        <input type="text" aria-label="Enter your EMPL ID" id="emplid" name = "emplid" class="form__input" autofocus placeholder="EMPLID" maxlength="8">
-        <div class="form__input-error-message"></div>
-      </div>
-      <div class="form__input-group">
         <input type="text" aria-label="Set up your username" id="usernameSetUp" name = "username" class="form__input" autofocus placeholder="Username" required>
         <div class="form__input-error-message"></div>
       </div>
@@ -121,7 +117,6 @@ if(isset($_POST['register'])) {
   $username = $_POST['username'] ?? '';
   $password = $_POST['password'] ?? '';
   $password2 = $_POST['password2'] ?? '';
-  $emplid = $_POST['emplid'] ?? '';
   $email = $_POST['email'] ?? '';
 
   if($password == $password2) {
@@ -132,7 +127,7 @@ if(isset($_POST['register'])) {
         $_SESSION["logged_in"] = true;
         $_SESSION["username"] = $username;
 
-        $sql = ("INSERT INTO users(username, password, emplid, email) VALUES ('$username', '$password', '$emplid', '$email')");
+        $sql = ("INSERT INTO users(username, password, email) VALUES ('$username', '$password', '$email')");
         $result = mysqli_query($link, $sql);
         print '<script>alert("Successfully registered!"); window.location.href = "dashboard.php"</script>';
       } else {
