@@ -134,9 +134,7 @@ if(isset($_POST['register'])) {
 
         $sql = ("INSERT INTO users(username, password, emplid, email) VALUES ('$username', '$password', '$emplid', '$email')");
         $result = mysqli_query($link, $sql);
-        print '<script>alert("Successfully registered!");
-        window.location.href = "profile.html"</script>';
-        //window.location.href = "dashboard.php"</script>';
+        print '<script>alert("Successfully registered!"); window.location.href = "dashboard.php"</script>';
       } else {
         print '<script>alert("Username is taken...");</script>';
       }

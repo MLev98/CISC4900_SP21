@@ -15,8 +15,10 @@ if ((!isset($_SESSION['logged_in']))) {
 </head>
 <body>
 <h1 id = "welcome-msg">Welcome! <?php echo $_SESSION['username']?></h1>
+<p>
+  <a href="./profile.html">Edit Your Profile</a>
+</p>
 <button type="button" onclick="location.href='logout.php';">LOGOUT</button>
 
 </body>
 </html>
-
