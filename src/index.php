@@ -68,7 +68,7 @@ and open the template in the editor.
         <input type="password" id="passwordConfirmedSetUp" name = "password2" class="form__input" autofocus placeholder="Confirm Password" required>
         <div class="form__input-error-message"></div>
       </div>
-      <button class="form__button" type="submit" name="register" onclick="createProfile()">Create</button>
+      <button class="form__button" type="submit" name="register">Create</button>
       <p class="form__text">
         <a class="form__link" onclick="formVisibilityToggle(createAccount, login)">Already have an account? Sign in</a>
       </p>
@@ -134,7 +134,9 @@ if(isset($_POST['register'])) {
 
         $sql = ("INSERT INTO users(username, password, emplid, email) VALUES ('$username', '$password', '$emplid', '$email')");
         $result = mysqli_query($link, $sql);
-        print '<script>alert("Successfully registered!"); window.location.href = "dashboard.php"</script>';
+        print '<script>alert("Successfully registered!");
+        window.location.href = "profile.html"</script>';
+        //window.location.href = "dashboard.php"</script>';
       } else {
         print '<script>alert("Username is taken...");</script>';
       }

@@ -51,14 +51,6 @@ function formVisibilityToggle(form1, form2) {
 }
 
 /**
-* Directed to Create Profile Page
-*
-*/
-function createProfile() {
-  window.location = "./profile.html";
-}
-
-/**
 * Lougouts Test Method
 *
 */
@@ -98,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             var validPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8}$/;
             //Checks password follows valid password requirements
             if(e.target.id === "passwordSetUp" && !e.target.value.match(validPassword))
-                setInputError(inputElement, "Invalid password; must contain atleast 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character");
+                setInputError(inputElement, "Invalid password; must contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character");
             //Checks password is the same as original
             if(e.target.id === "passwordConfirmedSetUp" && !(e.target.value == document.getElementById('passwordSetUp').value))
                 setInputError(inputElement, "Password doesn't match");
