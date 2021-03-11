@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 setInputError(inputElement, "EMPLID must only contain numbers");
             //Checks that username fulfills requirements for valid username
             if(e.target.id === "usernameSetUp" && e.target.value.length > 0 && e.target.value.length < 4)
-                setInputError(inputElement, "Username must be atleast 4 characters long");
+                setInputError(inputElement, "Username must be at least 4 characters long");
             var validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
             //Checks email follows valid email format
             if(e.target.id === "emailSetUp" && !e.target.value.match(validEmail))
