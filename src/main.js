@@ -50,14 +50,6 @@ function formVisibilityToggle(form1, form2) {
   form2.classList.remove("form--hidden");
 }
 
-/**
-* Lougouts Test Method
-*
-*/
-function logout() {
-  window.location = "./logout.php";
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.querySelector("#login");
   const createAccountForm = document.querySelector("#createAccount");
