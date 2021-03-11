@@ -4,12 +4,28 @@
   <meta charset="utf-8">
   <title>Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" type="text/css" rel="stylesheet">
+  <title>Brooklyn College Registration Profile</title>
 </head>
 <body>
   <script src="main.js" type="application/javascript"></script>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Menu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="./dashboard.php">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="./Profile.html">Profile</a>
+      <a class="nav-item nav-link" href="./Courses.html">Courses</a>
+      <a class="nav-item nav-link" href="./Planner.html">Planner</a>
+    </div>
+    </div>
+    </nav>
   <div class="container2">
     <h1 class="form__title">Profile:</h1>
     <div class="form__input-group">
@@ -19,6 +35,7 @@
     <div class="form__input-group">
       <center><label for="major">Select Your Major:</label>
       <select name="Major" id="major">
+          <!-- switch 1st option with undecided-->
         <option value="cs_major">Computer Science</option>
         <option value="is_major">Information Systems</option>
         <option value="mc_major">Multimedia Computing</option>
@@ -29,6 +46,7 @@
     <div class="form__input-group">
       <center><label for="minor">Select Your Minor:</label>
       <select name="Minor" id="minor">
+          <!-- switch 1st option with undecided-->
         <option value="cs_minor">Computer Science</option>
         <option value="ds_minor">Data Science</option>
         <option value="mc_minor">Multimedia Computing</option>
