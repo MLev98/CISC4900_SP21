@@ -36,7 +36,7 @@ and open the template in the editor.
         <input type="password" class="form__input" name="password" autofocus placeholder="Password" id="loginCredentials" required>
         <div class="form__input-error-message"></div>
       </div>
-      <button class="form__button" type="submit" onclick="login()" name="login">Login</button>
+      <button class="form__button" type="submit" name="login">Login</button>
       <p class="form__text">
         <a href="#" class="form__link" onclick="formVisibilityToggle(login, forgot)">Forgot your password?</a>
       </p>
@@ -68,7 +68,7 @@ and open the template in the editor.
         <input type="password" id="passwordConfirmedSetUp" name = "password2" class="form__input" autofocus placeholder="Confirm Password" required>
         <div class="form__input-error-message"></div>
       </div>
-      <button class="form__button" type="submit" name="register">Create</button>
+      <button class="form__button" type="submit" name="register" onclick="createProfile()">Create</button>
       <p class="form__text">
         <a class="form__link" onclick="formVisibilityToggle(createAccount, login)">Already have an account? Sign in</a>
       </p>

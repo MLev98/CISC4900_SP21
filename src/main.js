@@ -51,13 +51,11 @@ function formVisibilityToggle(form1, form2) {
 }
 
 /**
-* Logins using a test account Test Method
+* Directed to Create Profile Page
 *
 */
-function login() {
-  if (loginUser.value === "admin" && loginCredentials.value === "admin") {
-    window.location = "./profile.html";
-  }
+function createProfile() {
+  window.location = "./profile.html";
 }
 
 /**
