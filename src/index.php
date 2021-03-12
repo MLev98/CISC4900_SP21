@@ -15,13 +15,11 @@ and open the template in the editor.
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Login Form</title>
+  <title>Brooklyn College Registration Helper</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" type="text/css" rel="stylesheet">
-
-  <title>Brooklyn College Registration Helper</title>
 </head>
 <body>
   <script src="main.js"></script>
@@ -35,7 +33,7 @@ and open the template in the editor.
         <div class="form__input-error-message"></div>
       </div>
       <div class="form__input-group">
-        <input type="password" aria-label="Enter your password" class="form__input" name="password" autofocus placeholder="Password" id="loginCredentials" required>
+        <input type="password" aria-label="Enter your password" class="form__input" name="password" placeholder="Password" id="loginCredentials" required>
         <div class="form__input-error-message"></div>
       </div>
       <button class="form__button" type="submit" name="login">Login</button>
@@ -51,19 +49,19 @@ and open the template in the editor.
       <h1 class="form__title">Create Account</h1>
       <div class="form__message form__message--error"></div>
       <div class="form__input-group">
-        <input type="text" aria-label="Set up your username" id="usernameSetUp" name = "username" class="form__input" autofocus placeholder="Username" required>
+        <input type="text" aria-label="Set up your username" id="usernameSetUp" name = "username" class="form__input" placeholder="Username" required>
         <div class="form__input-error-message"></div>
       </div>
       <div class="form__input-group">
-        <input type="text" aria-label="Enter your email" id="emailSetUp" name = "email" class="form__input" autofocus placeholder="Email Address" required>
+        <input type="text" aria-label="Enter your email" id="emailSetUp" name = "email" class="form__input" placeholder="Email Address" required>
         <div class="form__input-error-message"></div>
       </div>
       <div class="form__input-group">
-        <input type="password" aria-label="Set up your password" id="passwordSetUp" name = "password" class="form__input" autofocus placeholder="Password" required>
+        <input type="password" aria-label="Set up your password" id="passwordSetUp" name = "password" class="form__input" placeholder="Password" required>
         <div class="form__input-error-message"></div>
       </div>
       <div class="form__input-group">
-        <input type="password" aria-label="Confirm your password" id="passwordConfirmedSetUp" name = "password2" class="form__input" autofocus placeholder="Confirm Password" required>
+        <input type="password" aria-label="Confirm your password" id="passwordConfirmedSetUp" name = "password2" class="form__input" placeholder="Confirm Password" required>
         <div class="form__input-error-message"></div>
       </div>
       <button class="form__button" type="submit" name="register">Create</button>
@@ -76,15 +74,15 @@ and open the template in the editor.
       <h1 class="form__title">Password Reset</h1>
       <div class="form__message form__message--error"></div>
       <div class="form__input-group">
-        <input type="text" aria-label="Enter your email" class="form__input" autofocus placeholder="Email" required>
+        <input type="text" aria-label="Enter your email" class="form__input" placeholder="Email" required>
         <div class="form__input-error-message"></div>
       </div>
       <div class="form__input-group">
-        <input type="password" aria-label="Enter new password" class="form__input" autofocus placeholder="Enter New Password" required>
+        <input type="password" aria-label="Enter new password" class="form__input" placeholder="Enter New Password" required>
         <div class="form__input-error-message"></div>
       </div>
       <div class="form__input-group">
-        <input type="password" aria-label="Re-enter your password" class="form__input" autofocus placeholder="Re-enter Password" required>
+        <input type="password" aria-label="Re-enter your password" class="form__input" placeholder="Re-enter Password" required>
         <div class="form__input-error-message"></div>
       </div>
       <button class="form__button" type="submit">Submit</button>
