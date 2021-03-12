@@ -20,11 +20,11 @@ and open the template in the editor.
   <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" type="text/css" rel="stylesheet">
-  
+
   <title>Brooklyn College Registration Helper</title>
 </head>
 <body>
-  <script src="main.js" type="application/javascript"></script>
+  <script src="main.js"></script>
   <div class="container">
     <!-- Login Form -->
     <form action="index.php" class="form" id="login" method="post">
