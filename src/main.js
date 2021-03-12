@@ -26,8 +26,9 @@ function setFormMessage(formElement, type, message) {
 * @param message Error message
 */
 function setInputError(inputElement, message) {
-  inputElement.classList.add("form__input--error");
-  inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
+    "use strict";
+    inputElement.classList.add("form__input--error");
+    inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
 }
 
 /**
@@ -36,8 +37,9 @@ function setInputError(inputElement, message) {
 * @param inputElement Input field that error will be cleared from
 */
 function clearInputError(inputElement) {
-  inputElement.classList.remove("form__input--error");
-  inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
+    "use strict";
+    inputElement.classList.remove("form__input--error");
+    inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
 }
 
 /**
@@ -47,14 +49,15 @@ function clearInputError(inputElement) {
 * @param form2 Form to be shown
 */
 function formVisibilityToggle(form1, form2) {
-  form1.classList.add("form--hidden");
-  form2.classList.remove("form--hidden");
+    "use strict";
+    form1.classList.add("form--hidden");
+    form2.classList.remove("form--hidden");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const loginForm = document.querySelector("#login");
-  const createAccountForm = document.querySelector("#createAccount");
-  const forgotForm = document.querySelector("#forgot");
+  // const loginForm = document.querySelector("#login");
+  // const createAccountForm = document.querySelector("#createAccount");
+  // const forgotForm = document.querySelector("#forgot");
 
   //Checks for successful login and prints error if unsuccessful
   // loginForm.addEventListener("submit", e => {
