@@ -12,11 +12,10 @@
 * @param message The message
 */
 function setFormMessage(formElement, type, message) {
-    "use strict";
-    var messageElement = formElement.querySelector(".form__message");
-    messageElement.textContent = message;
-    messageElement.classList.remove("form__message--success", "form__message--error");
-    messageElement.classList.add(`form__message--${type}`);
+  var messageElement = formElement.querySelector(".form__message");
+  messageElement.textContent = message;
+  messageElement.classList.remove("form__message--success", "form__message--error");
+  messageElement.classList.add(`form__message--${type}`);
 }
 
 /**
