@@ -25,8 +25,6 @@ if ((!isset($_SESSION['logged_in']))) {
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="./dashboard.php">Home <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="./profile.html">Profile</a>
-        <a class="nav-item nav-link" href="./Courses.html">Courses</a>
-        <a class="nav-item nav-link" href="./Planner.html">Planner</a>
       </div>
     </div>
   </nav>
