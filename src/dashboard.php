@@ -4,6 +4,7 @@ ob_start();
 include("config.php");
 
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <!-- jQuery min js -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
@@ -22,7 +23,7 @@ include("config.php");
 <?php include('endpoints/majorsEndpoint.php');?>
 
 <!-- DISPLAY/UPDATE COURSES-->
-<div id = "container"> 
+<div id = "container">
 <?php include('endpoints/coursesTakenEndpoint.php'); ?>
 </div>
 
