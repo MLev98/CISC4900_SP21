@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       var numbers = /^[0-9]+$/;
       //Checks EMPLID is only numbers
-      if((e.target.id === "emplid" || e.target.id === "emplid_profile") && !e.target.value.match(numbers))
+      if((e.target.id === "emplid") && !e.target.value.match(numbers))
       setInputError(inputElement, "EMPLID must only contain numbers");
       //Checks that username fulfills requirements for valid username
       if(e.target.id === "usernameSetUp" && e.target.value.length > 0 && e.target.value.length < 4)
@@ -82,12 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
       //Checks email follows valid email format
       if(e.target.id === "emailSetUp" && !e.target.value.match(validEmail))
       setInputError(inputElement, "Invalid email, enter a valid email");
-      var validPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8}$/;
+      var validPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?=.*?\W)(?!.*\s).{8}$/;
       //Checks password follows valid password requirements
       if(e.target.id === "passwordSetUp" && !e.target.value.match(validPassword))
       setInputError(inputElement, "Invalid password; must contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character");
       //Checks password is the same as original
-      if(e.target.id === "passwordConfirmedSetUp" && !(e.target.value == document.getElementById('passwordSetUp').value))
+      if(e.target.id === "passwordConfirmedSetUp" && !(e.target.value === document.getElementById('passwordSetUp').value))
       setInputError(inputElement, "Password doesn't match");
     });
 
