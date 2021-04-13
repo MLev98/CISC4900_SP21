@@ -48,7 +48,7 @@ if ((isset($_SESSION['logged_in']) && $_SESSION['logged_in'] != '')) {
         <div class="form__input-error-message"></div>
       </div>
       <div class="form__input-group">
-        <input type="text" aria-label="Enter your emplid" id="emailSetUp" name = "emplid" class="form__input" autofocus placeholder="EMPLID" required>
+        <input type="text" aria-label="Enter your emplid" id="emplid" name = "emplid" class="form__input" autofocus placeholder="EMPLID" maxlength="8" required>
         <div class="form__input-error-message"></div>
       </div>
       <div class="form__input-group">
