@@ -5,6 +5,7 @@ CREATE TABLE majors (
     id INT(50) AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
     isMinor BIT
+    isOnlyMinor BIT
 );
 
 CREATE TABLE users (
@@ -38,5 +39,10 @@ CREATE TABLE courses_taken (
     FOREIGN KEY(courseID) REFERENCES courses(id)
 );
 
-INSERT INTO majors(name, isMinor) VALUES ("Computer Science", 1);
-INSERT INTO majors(name, isMinor) VALUES ("Computer Information Systems", 0);
+
+INSERT INTO majors(name, isMinor, isOnlyMinor) VALUES ("Computer Science", 1, 0),
+  ("Information Systems", 0, 0), ("Multimedia Computing", 1, 0),
+  ("Computational Mathematics Theoretical", 0, 0), ("Computational Mathematics", 0, 0);
+
+INSERT INTO majors(name, isMinor, isOnlyMinor) VALUES ("Cognitive Science", 1, 1),
+  ("Data Science", 1, 1), ("NONE", 1, 1);
