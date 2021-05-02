@@ -26,7 +26,7 @@ foreach($semester_arr as $groupid) {
             
             echo '<div class="col-lg-12 col-xl-3 qitem" style="" id="c'. $row['id'] .'">'; //c+id BECAUSE form bug
             echo '<div class="card-sub">';
-            echo '<div class="card-block">';
+            echo '<div class="card-block popup" onclick="myFunction()> <span class="popuptext" id="myPopup">Popup text...</span>';
             echo '<h4 class="card-title">'. $row['courseCode'] .'</h4>';
             echo '<p class="card-text">'. $row['courseName'] .'</p>';
             echo '</div>';
