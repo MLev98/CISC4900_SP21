@@ -6,18 +6,18 @@
     <?php
         //Display current major
         if(isset($_SESSION['majorID']) && $_SESSION['majorID'] != '') {
-            $sql = "SELECT id, name FROM majors WHERE id = '{$_SESSION['majorID']}'";
+            $sql = "SELECT id, name FROM majors WHERE id = '{$_SESSION['majorID']}' AND NOT isOnlyMinor = 1";
             $result = mysqli_query($link, $sql);
             $arr = mysqli_fetch_assoc($result);
             echo '<option value="'. $arr['id'] . '">' . $arr['name'] . '</option>';
         } else {
             echo '<option value = "-1">NONE</option>';
         }
-        
+
         //Display all majors
         $sql = "SELECT * FROM majors";
         $majors = mysqli_query($link, $sql);
-        
+
         foreach($majors as $row) {
             if($row['id'] != $_SESSION['majorID'])
                 echo '<option value="'. $row['id'] . '">' . $row['name'] . '</option>';
@@ -53,7 +53,6 @@
 if(isset($_POST['majorForm'])) {
     $major = $_POST['major'] ?? '';
     $minor = $_POST['minor'] ?? '';
-    
     if($minor == -1 && $major != -1) {
         $sql = "UPDATE users SET majorID = '$major' WHERE id = '{$_SESSION['userID']}'";
         $_SESSION['majorID'] = $major;

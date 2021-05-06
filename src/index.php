@@ -12,12 +12,12 @@ if ((isset($_SESSION['logged_in']) && $_SESSION['logged_in'] != '')) {
   <meta charset="utf-8">
   <title>Brooklyn College Registration Helper</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" type="text/css" rel="stylesheet">
 </head>
 <body>
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
   <div class="container">
     <!-- Login Form -->
     <form action="index.php" class="form" id="login" method="post">
