@@ -4,7 +4,7 @@ USE planner;
 CREATE TABLE majors (
     id INT(50) AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
-    isMinor BIT,
+    isMinor BIT
     isOnlyMinor BIT
 );
 
@@ -40,4 +40,9 @@ CREATE TABLE courses_taken (
 );
 
 
-INSERT INTO majors(name, isMinor, isOnlyMinor) VALUES ("Computer Science", 1, 0), ("Accounting", 1, 0), ("Mathematics", 1, 0)
+INSERT INTO majors(name, isMinor, isOnlyMinor) VALUES ("Computer Science", 1, 0),
+  ("Information Systems", 0, 0), ("Multimedia Computing", 1, 0),
+  ("Computational Mathematics Theoretical", 0, 0), ("Computational Mathematics", 0, 0);
+
+INSERT INTO majors(name, isMinor, isOnlyMinor) VALUES ("Cognitive Science", 1, 1),
+  ("Data Science", 1, 1), ("NONE", 1, 1);
