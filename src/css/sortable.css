@@ -1,51 +1,207 @@
+body {
+    background: url("../bng.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
 
-    .stretch-card>.card {
-        width: 100%;
-        min-width: 100%
-    }
-    .sortable {
-  padding: 10px 10px !important;
+.stretch-card>.card {
+    width: 100%;
+    min-width: 100%
 }
-    body {
-        background-color: #f9f9fa
-    }
 
-    .flex {
-        -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto
-    }
+.sortable {
+    padding: 10px 10px !important;
+}
 
-    @media (max-width:991.98px) {
-        .padding {
-            padding: 1.5rem
-        }
-    }
+.flex {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto
+}
 
-    @media (max-width:767.98px) {
-        .padding {
-            padding: 1rem
-        }
-    }
-
+@media (max-width:991.98px) {
     .padding {
-        padding: 3rem !important
+        padding: 1.5rem
+    }
+}
+
+@media (max-width:767.98px) {
+    .padding {
+        padding: 1rem
+    }
+}
+
+.padding {
+    padding: 3rem !important
+}
+
+.card-sub {
+    cursor: move;
+    border: none;
+    -webkit-box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), 0 -2px 1px -2px rgba(0, 0, 0, 0.04), 0 0 0 -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), 0 -2px 1px -2px rgba(0, 0, 0, 0.04), 0 0 0 -1px rgba(0, 0, 0, 0.05)
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px)
+}
+
+.card-block {
+    padding: 1.25rem;
+    background-color: #ebecf0;
+    overflow: auto;
+}
+
+.main-block {
+    border-radius: 0px 0px 15px 15px ;
+    box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.content {
+    overflow: auto;
+}
+
+.card {
+    width: 300px !important;
+    background: #ffffff00;
+    border: none;
+}
+
+.card-header {
+    background: #ebecf0;
+    border-radius: 15px 15px 0px 0px !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border: none;
+    text-align: center;
+}
+
+.class-block {
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor:grab;
+}
+
+.class-block:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+/* additional */
+.btn {
+    background: #ebecf0;
+    color: black;
+    box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+}
+
+.btn:hover {
+    background: #a5a5a5;
+    color:white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.btn-danger {
+    float: right;
+    background: none;
+    color: black;
+    border: 0px;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background: red;
+    box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+}
+
+.container {
+    height: 100%;
+}
+
+.row-fluid {
+    overflow: auto;
+    white-space: nowrap;
+    height: 85%;
+}
+
+.col-cards {
+    float: none;
+    width: 300px !important;
+    white-space: pre-line;
+    margin: 0px 20px;
+}
+
+.qitem {
+    margin-bottom: 20px;
+}
+
+.qitem:hover .btn-danger {
+    display: block;
+}
+
+.dept-form {
+    height: 60px
+}
+
+.temp-row {
+    height: 20%
+}
+
+.fake-navbar {
+    background: #ffffff94;
+    margin: 0px;
+    color: black;
+    text-align: center;
+}
+
+.form-select {
+    background-color: #eaebef;
+    box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+}
+
+.form-select:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+@media (min-width: 1000px) {
+    .btn-danger {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 999px) {
+    .btn-danger {
+        display: block;
     }
 
-    .card-sub {
-        cursor: move;
-        border: none;
-        -webkit-box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), 0 -2px 1px -2px rgba(0, 0, 0, 0.04), 0 0 0 -1px rgba(0, 0, 0, 0.05);
-        box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), 0 -2px 1px -2px rgba(0, 0, 0, 0.04), 0 0 0 -1px rgba(0, 0, 0, 0.05)
+    .btn-danger:focus:active {
+        background: red;
     }
+}
 
-    .card-img-top {
-        width: 100%;
-        border-top-left-radius: calc(.25rem - 1px);
-        border-top-right-radius: calc(.25rem - 1px)
-    }
+.btn-group button {
+    margin: 0 7px;
+}
 
-    .card-block {
-        padding: 1.25rem;
-        background-color: #fff !important
-    }
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgb(175, 175, 175);
+}
