@@ -78,4 +78,9 @@ function logged_in_notification() {
   })
   }
 
-  
+  function no_dept_class_selected() {
+    Swal.fire({
+    title: '<strong>Select a department and class</strong>',
+    icon: 'warning'
+  })
+  }

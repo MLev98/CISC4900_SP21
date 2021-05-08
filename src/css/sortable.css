@@ -1,5 +1,6 @@
 body {
-    background: url("../bng.jpg");
+    background: url("../bng.jpg") no-repeat center center fixed;
+    background-size: cover;
   }
 
 .stretch-card>.card {
@@ -9,10 +10,6 @@ body {
 
 .sortable {
     padding: 10px 10px !important;
-}
-
-body {
-    background-color: #f9f9fa
 }
 
 .flex {

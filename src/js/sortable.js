@@ -7,10 +7,17 @@ $(document).ready(function () {
         dropOnEmpty: true,
         revert: 'invalid',
         start:function(event, ui){
-            origin = ui.item.offsetParent()[0].id;
+            if(ui.item[0].classList[0] === "tmp") {
+                origin = -1;
+            } else {
+                origin = ui.item.offsetParent()[0].id;
+            }
         },
         stop: function (event, ui) {
+            if(ui.item[0].classList[0] === "tmp") document.getElementById(ui.item.attr("id")).classList.remove("tmp");
+
             end = ui.item.offsetParent()[0].id;
+
             if(origin != end) sendDrop(end, ui.item[0].id);
         }
     });
@@ -18,7 +25,6 @@ $(document).ready(function () {
 });
 /*
     Updates database when course is dropped into a semester
-
     @params:
     semester - column id where item is dropped
     classID - item id from course that was dragged
@@ -78,6 +84,10 @@ function createClass() {
 
     var e = document.getElementById("addCourseF");
     var classID = e.value;
+    if(classID === "") {
+        no_dept_class_selected();
+        return;
+    }
     var arr = e.options[e.selectedIndex].text.split(" | ");
     var classCode = arr[0];
     var className = arr[1];
@@ -93,7 +103,7 @@ function createClass() {
     node4.innerHTML = classCode;
 
     node0.className = "row sortable temp-row";
-    node1.className = "col-lg-12 col-xl-12 qitem";
+    node1.className = "tmp col-lg-12 col-xl-12 qitem";
     node2.className = "card-sub";
     node3.className = "card-block class-block";
     node4.className = "card-title";
@@ -124,7 +134,6 @@ function createSemester() {
 
     /*
         Determines the correct # semester element to create.
-
         Otherwise we would need to update database when an entire semester element is deleted
         e.g {Semester 1,2,3} if we delete {Semester 2} then we would have {Semester 1,3} the next semester should be 4
         but instead would create 3 again, corrupting the database.
