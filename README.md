@@ -22,8 +22,6 @@ To view the live hosted version of this repository click on [this](https://cisc4
 
 ![How to Import our Database](./img/MySQL_Install_2.jpg)
 
-![Where our Data is Stored and How to Modify It](./img/MySQL_Install_3.png)
-
 5. Click **Admin** for *Apache* and this will open a webpage:
 
 ```
