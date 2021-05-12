@@ -2,13 +2,13 @@
 
 ## Live Hosted
 
-To view the live hosted version of this code click on [this](https://cisc4900.herokuapp.com/) link.
+To view the live hosted version of this repository click on [this](https://cisc4900.herokuapp.com/) link.
 
 ## Local Installation Guide
 
 1. To run the application locally, you will need to download the source code & install **XAMPP Control Panel** using [this](https://www.apachefriends.org/download.html) link.
 
-2. You will then need to copy the **CISC4900_SP21** folder into the relative path:
+2. You will then need to copy the **CISC4900_SP21** folder into the path:
 
 ```
 C:\xampp\htdocs
@@ -20,7 +20,7 @@ C:\xampp\htdocs
 
 ![Importing into the Current Server](./img/MySQL_Install_1.png)
 
-![How to Import our Database](./img/MySQL_Install_2.png)
+![How to Import our Database](./img/MySQL_Install_2.jpg)
 
 ![Where our Data is Stored and How to Modify It](./img/MySQL_Install_3.png)
 
