@@ -8,7 +8,7 @@ To view the live hosted version of this repository click on [this](https://cisc4
 
 1. To run the application locally, you will need to download the source code & install **XAMPP Control Panel** using [this](https://www.apachefriends.org/download.html) link.
 
-2. You will then need to copy the **CISC4900_SP21** folder onto the same drive you installed **XAMPP Control Panel**:
+2. You will then need to copy the **CISC4900_SP21** folder onto the same drive you installed **XAMPP Control Panel** into the path:
 
 ```
 \xampp\htdocs
