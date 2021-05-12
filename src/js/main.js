@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       //Checks email follows valid email format
       if(e.target.id === "emailSetUp" && !e.target.value.match(validEmail))
       setInputError(inputElement, "Invalid email, enter a valid email");
-      var validPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?=.*?\W)(?!.*\s).{8}$/;
+      var validPassword = /^(?=.{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$/;
       //Checks password follows valid password requirements
       if(e.target.id === "passwordSetUp" && !e.target.value.match(validPassword))
       setInputError(inputElement, "Invalid password; must contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character");
