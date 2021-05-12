@@ -8,10 +8,10 @@ To view the live hosted version of this repository click on [this](https://cisc4
 
 1. To run the application locally, you will need to download the source code & install **XAMPP Control Panel** using [this](https://www.apachefriends.org/download.html) link.
 
-2. You will then need to copy the **CISC4900_SP21** folder into the path:
+2. You will then need to copy the **CISC4900_SP21** folder onto the same drive you installed **XAMPP Control Panel**:
 
 ```
-C:\xampp\htdocs
+\xampp\htdocs
 ```
 
 3. Run **XAMPP** and click *Start for Apache and MySQL*
