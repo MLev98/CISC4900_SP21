@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: notifications.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: notifications.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/* sweet alert notifications */
+
+/**
+* Notifies user of successful login message and redirects user to main page.
+*
+*/
+function logged_in_notification() {
+  Swal.fire({
+    title: '&lt;strong>Successfully logged in&lt;/strong>',
+    icon: 'success'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "dashboard.php";
+    }
+  })
+}
+
+/**
+* Notifies user of Invalid credentials error
+*
+*/
+function wrong_log_in_notification() {
+  Swal.fire({
+    title: '&lt;strong>Invalid Username or Password&lt;/strong>',
+    icon: 'warning'
+  })
+}
+
+/**
+* Notifies user of Username taken error
+*
+*/
+function username_taken_notification() {
+  Swal.fire({
+    title: '&lt;strong>Username taken, try again&lt;/strong>',
+    icon: 'warning'
+  })
+}
+
+/**
+* Notifies user of Successful creation of account, and redirtects user to main page
+*
+*/
+function successfully_registered_notification() {
+  Swal.fire({
+    title: '&lt;strong>Successfully registered&lt;/strong>',
+    icon: 'success'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "dashboard.php";
+    }
+  })
+}
+
+/**
+* Notifies user of Miss Matched Password error
+*
+*/
+function passwords_dont_match_notification() {
+  Swal.fire({
+    title: '&lt;strong>Passwords dont match, try again&lt;/strong>',
+    icon: 'warning'
+  })
+}
+
+/**
+* Notifies user of Course Deleted and updates page if notification is approved
+*
+*/
+function successfully_delete_course_notification() {
+  Swal.fire({
+    title: '&lt;strong>Successfully deleted&lt;/strong>',
+    icon: 'success',
+    iconColor: 'red',
+    confirmButtonColor: 'red',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "dashboard.php";
+    }
+  })
+}
+
+/**
+* Notifies user of Course added and updates page if notification is approved
+*
+*/
+function successfully_added_course_notification() {
+  Swal.fire({
+    title: '&lt;strong>Successfully added&lt;/strong>',
+    icon: 'success'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "dashboard.php";
+    }
+  })
+}
+
+/**
+* Notifies user of Course not added error
+*
+*/
+function unsuccessfully_added_course_notification() {
+  Swal.fire({
+    title: '&lt;strong>Credit Limit Overpassed&lt;/strong>',
+    icon: 'error'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "dashboard.php";
+    }
+  })
+}
+
+/**
+* Notifies user to select a department and class with an error message
+*
+*/
+function no_dept_class_selected() {
+  Swal.fire({
+    title: '&lt;strong>Select a department and class&lt;/strong>',
+    icon: 'warning'
+  })
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#clearInputError">clearInputError</a></li><li><a href="global.html#createClass">createClass</a></li><li><a href="global.html#createSemester">createSemester</a></li><li><a href="global.html#formVisibilityToggle">formVisibilityToggle</a></li><li><a href="global.html#logged_in_notification">logged_in_notification</a></li><li><a href="global.html#no_dept_class_selected">no_dept_class_selected</a></li><li><a href="global.html#passwords_dont_match_notification">passwords_dont_match_notification</a></li><li><a href="global.html#removeClass">removeClass</a></li><li><a href="global.html#sendDrop">sendDrop</a></li><li><a href="global.html#setFormMessage">setFormMessage</a></li><li><a href="global.html#setInputError">setInputError</a></li><li><a href="global.html#successfully_added_course_notification">successfully_added_course_notification</a></li><li><a href="global.html#successfully_delete_course_notification">successfully_delete_course_notification</a></li><li><a href="global.html#successfully_registered_notification">successfully_registered_notification</a></li><li><a href="global.html#unsuccessfully_added_course_notification">unsuccessfully_added_course_notification</a></li><li><a href="global.html#username_taken_notification">username_taken_notification</a></li><li><a href="global.html#wrong_log_in_notification">wrong_log_in_notification</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Wed May 12 2021 10:18:45 GMT-0400 (Eastern Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
